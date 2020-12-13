@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: steelblue;
+  color: white;
+  font-family: "Muli", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem 4rem;
+  border-radius: 0.5rem;
+
+  & h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  & a {
+    text-decoration: none;
+    color: lightblue;
+    margin-left: 0.5rem;
+  }
+
+  form {
+    & .form-control {
+      position: relative;
+      margin: 2rem 0 4rem;
+      width: 30rem;
+
+      & input {
+        background-color: transparent;
+        border: 0;
+        border-bottom: 2px solid #fff;
+        display: block;
+        width: 100%;
+        padding: 1.5rem 0;
+        font-size: 1.8rem;
+        color: #fff;
+
+        &:focus,
+        &:valid {
+          outline: none;
+          border-bottom-color: rgb(212, 60, 60);
+        }
+
+        &:focus + label span,
+        &:valid + label span {
+          color: lightblue;
+          transform: translateY(-3rem);
+        }
+      }
+
+      & label {
+        position: absolute;
+        top: 1.5rem;
+        left: 0;
+
+        & span {
+          display: inline-block;
+          font-size: 1.8rem;
+          min-width: 0.5rem;
+          transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+      }
+    }
+
+    & .btn {
+      cursor: pointer;
+      display: inline-block;
+      width: 100%;
+      background-color: lightblue;
+      padding: 1.5rem;
+      font-family: inherit;
+      font-size: 1.6rem;
+      border: 0;
+      border-radius: 0.5rem;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+
+    & .text {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 1.3rem;
+    }
+  }
+}
