@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 
 * {
   margin: 0;
@@ -18,7 +18,7 @@ html {
 
 body {
   background-color: #f6f7fb;
-  font-family: 'Muli', sans-serif;
+  font-family: "Muli", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,7 +38,7 @@ body {
     width: 35rem;
 
     &::before {
-      content: '';
+      content: "";
       background-color: #e0e0e0;
       position: absolute;
       top: 50%;
