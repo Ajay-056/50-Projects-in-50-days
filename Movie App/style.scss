@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@200;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #22254b; //#373b69
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #373b69;
+
+  & form {
+    & .search {
+      background-color: transparent;
+      border: 2px solid #22254b;
+      border-radius: 5rem;
+      font-family: inherit;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      color: #fff;
+
+      &::placeholder {
+        color: #7378c5;
+      }
+
+      &:focus {
+        outline: none;
+        background-color: #22254b;
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  & .movie {
+    width: 30rem;
+    margin: 1rem;
+    background-color: #373b69;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.3rem;
+
+    & img {
+      width: 100%;
+    }
+
+    & .movie-info {
+      color: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 1rem 1rem;
+      letter-spacing: 0.5px;
+
+      & h3 {
+        margin-top: 0;
+      }
+
+      & span {
+        background-color: #22254b;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.3rem;
+        font-weight: bold;
+
+        &.green {
+          color: lightgreen;
+        }
+        &.orange {
+          color: orange;
+        }
+        &.red {
+          color: red;
+        }
+      }
+    }
+
+    & .overview {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 1rem 1rem 0 0;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      opacity: 0;
+      right: 0;
+      max-height: 100%;
+      transform: translateY(101%) scale(0);
+      // transform-origin: center;
+      transition: all 0.35s ease-in;
+      font-size: 1.3rem;
+
+      & h3 {
+        font-size: 2rem;
+      }
+    }
+
+    &:hover .overview {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+  }
+}
