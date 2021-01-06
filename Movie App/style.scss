@@ -107,7 +107,7 @@ main {
       opacity: 0;
       right: 0;
       max-height: 100%;
-      transform: translateY(101%) scale(0);
+      transform: translateY(101%) scale(0) rotate(160deg);
       // transform-origin: center;
       transition: all 0.35s ease-in;
       font-size: 1.3rem;
