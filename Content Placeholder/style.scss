@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #ecf0f1;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+.card {
+  box-shadow: 0 2px 1rem rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 35rem;
+
+  & .card-header {
+    height: 20rem;
+
+    & img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  & .card-content {
+    background-color: #fff;
+    padding: 3rem;
+
+    & .card-title {
+      height: 2rem;
+      margin: 0;
+    }
+
+    & .card-excerpt {
+      color: #777;
+      margin: 1rem 0 20px;
+      text-align: justify;
+    }
+
+    & .author {
+      display: flex;
+
+      & .profile-img {
+        border-radius: 50%;
+        overflow: hidden;
+        height: 4rem;
+        width: 4rem;
+      }
+
+      & .author-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 1rem;
+        width: 10rem;
+
+        & small {
+          color: #aaa;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+.animated-bg {
+  background-image: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #edeef1 10%,
+    #f6f7f8 20%,
+    #f6f7f8 100%
+  );
+  background-size: 200% 100%;
+  animation: bgPos 1s linear infinite;
+}
+
+.animated-bg-text {
+  border-radius: 5rem;
+  display: inline-block;
+  margin: 0;
+  height: 1rem;
+  width: 100%;
+}
+
+@keyframes bgPos {
+  0% {
+    background-position: 50% 0;
+  }
+
+  100% {
+    background-position: -150% 0;
+  }
+}
