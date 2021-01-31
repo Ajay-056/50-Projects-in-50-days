@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #222;
+  padding-bottom: 5rem;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.nav {
+  position: fixed;
+  background-color: #222;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+
+  & .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  & ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.7rem 1.5rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &.active {
+    background-color: #fff;
+    box-shadow: 0 2px 1rem rgba(0, 0, 0, 0.3);
+
+    & a {
+      color: #000;
+    }
+
+    // & .container {
+    //   padding: 1rem 0;
+    // }
+  }
+}
+
+.nav a.current,
+.nav a:hover {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+.hero {
+  background-image: url("https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin-bottom: 2rem;
+  z-index: -2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+  }
+
+  & h1 {
+    font-size: 4.6rem;
+    margin: -2rem 0 2rem;
+  }
+
+  & p {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+}
+
+.content {
+  & h2,
+  & h3 {
+    font-size: 150%;
+    margin: 2rem 0;
+  }
+
+  & p {
+    color: #555;
+    line-height: 2.5rem;
+    letter-spacing: 0.8px;
+    font-size: 1.2rem;
+  }
+}
