@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #2a2a72;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.user-form {
+  width: 100%;
+  max-width: 70rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & #main {
+    margin-bottom: 2rem;
+  }
+
+  & .btn {
+    margin-top: 0.2rem;
+    margin-left: 2rem;
+    padding: 1.3rem 2.3rem;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  & .btn-clear {
+    background-color: rgb(228, 14, 14);
+  }
+
+  & .btn-submit {
+    background-color: green;
+    margin-right: 3rem;
+  }
+
+  & input {
+    background-color: #4c2885;
+    padding: 1.1rem;
+    font-size: 1.6rem;
+    width: 100%;
+    display: block;
+    border-radius: 1rem;
+    border: none;
+    color: #fff;
+    margin-bottom: 3.2rem;
+    font-family: inherit;
+    box-shadow: 0 5px 1rem rgba(154, 160, 185, 0.05),
+      0 1.5rem 4rem rgba(0, 0, 0, 0.1);
+
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: #bbb;
+    }
+  }
+}
+
+.card {
+  background-color: #4c2885;
+  display: flex;
+  max-width: 80rem;
+  border-radius: 2rem;
+  box-shadow: 0 5px 1rem rgba(154, 160, 185, 0.05),
+    0 1.5rem 4rem rgba(0, 0, 0, 0.1);
+  padding: 4.8rem;
+  margin: 0 2.4rem;
+  transition: all 0.3 ease-out;
+
+  & .avatar {
+    border-radius: 50%;
+    border: 1rem solid #2a2a72;
+    height: 15rem;
+    width: 15rem;
+  }
+
+  & .user-info {
+    color: #eee;
+    margin-left: 3.2rem;
+
+    & h2 {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+
+    & p {
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+
+    & ul {
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+      padding: 0;
+      max-width: 40rem;
+      margin-bottom: 1rem;
+
+      & li {
+        display: flex;
+        align-items: center;
+
+        & strong {
+          font-size: 1.44rem;
+          margin-right: 0.8rem;
+        }
+      }
+    }
+
+    & .repo {
+      text-decoration: none;
+      color: #fff;
+      background-color: #2a2a72;
+      font-size: 1.12rem;
+      padding: 0.4rem 0.8rem;
+      margin-right: 0.8rem;
+      margin-bottom: 0.8rem;
+      display: inline-block;
+    }
+  }
+}
+
+@media screen and (max-width: 31.25em) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-form {
+    max-width: 40rem;
+  }
+}
