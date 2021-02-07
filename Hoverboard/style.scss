@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  // overflow: hidden;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  // max-width: 40rem;
+
+  & .square {
+    background-color: #1d1d1d;
+    box-shadow: 0 0 2px #000;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin: 0.2rem;
+    transition: 2s ease;
+
+    &:hover {
+      transition-duration: 0s;
+    }
+  }
+}
