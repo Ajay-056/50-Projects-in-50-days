@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.background {
+  background: url("https://images.unsplash.com/photo-1556745757-8d76bdb6984b")
+    no-repeat center center/cover;
+  position: absolute;
+  top: -2rem;
+  bottom: -2rem;
+  left: -2rem;
+  right: -2rem;
+  z-index: -1;
+  filter: blur(20px);
+}
