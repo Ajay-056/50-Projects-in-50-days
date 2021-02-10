@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f8f9fd;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  border-radius: 5px;
+  box-shadow: 3px 3px 1rem 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 30rem;
+
+  & .header {
+    background-color: #3e57db;
+    color: #fff;
+    padding: 3rem 2rem;
+
+    & .title {
+      margin: 0 0 0 5px;
+      font-size: 2rem;
+      letter-spacing: 0.8px;
+    }
+
+    & .subtitle {
+      display: inline-block;
+      margin: 5px 5px 20px;
+      opacity: 0.8;
+      font-size: 1.3rem;
+      letter-spacing: 0.6px;
+    }
+
+    & input {
+      background-color: rgba(0, 0, 0, 0.3);
+      border: 0;
+      border-radius: 5rem;
+      color: #fff;
+      font-size: 1.4rem;
+      padding: 1rem 1.5rem;
+      width: 100%;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  & .user-list {
+    background-color: #fff;
+    list-style-type: none;
+    margin: 0;
+    max-height: 40rem;
+    overflow-y: auto;
+
+    & li {
+      display: flex;
+      padding: 2rem;
+
+      &:not(:last-of-type) {
+        border-bottom: 1px solid #eee;
+      }
+
+      &.hide {
+        display: none;
+      }
+
+      & .loading {
+        font-size: 1.5rem;
+        font-weight: 900;
+      }
+
+      & img {
+        border-radius: 50%;
+        object-fit: cover;
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+
+    & .user-info {
+      margin-left: 1rem;
+
+      & h4 {
+        margin: 0 0 1rem;
+        font-size: 1.58rem;
+      }
+
+      & p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: lightgray;
+  border: 4px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ce313c;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
