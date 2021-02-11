@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.text {
+  text-transform: uppercase;
+}
+
+.logo {
+  width: 15rem;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+
+  &.visible {
+    transform: translateX(0%);
+  }
+
+  &.nav-black {
+    background-color: rgb(34, 31, 31);
+    width: 50%;
+    min-width: 48rem;
+    min-width: 32rem;
+    transition-delay: 0.4s;
+
+    &.visible {
+      transition-delay: 0s;
+    }
+  }
+
+  &.nav-red {
+    background-color: rgb(229, 9, 20);
+    width: 95%;
+    transition-delay: 0.2s;
+
+    &.visible {
+      transition-delay: 0.2s;
+    }
+  }
+
+  &.nav-white {
+    background-color: #fff;
+    width: 95%;
+    padding: 4rem;
+    position: relative;
+    transition-delay: 0s;
+
+    &.visible {
+      transition-delay: 0.4s;
+    }
+
+    & .close-btn {
+      position: absolute;
+      right: 3rem;
+      top: 4rem;
+      opacity: 0.4;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    & .list {
+      list-style-type: none;
+      padding: 0;
+
+      & li {
+        margin: 2rem 0;
+      }
+
+      & a {
+        color: rgb(34, 31, 31);
+        font-size: 1.4rem;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      & ul {
+        list-style-type: none;
+        padding-left: 2rem;
+      }
+    }
+  }
+}
+
+.nav-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.open-btn {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .open-btn {
+    bottom: -90%;
+    left: 50%;
+  }
+}
