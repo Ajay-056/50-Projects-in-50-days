@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 100rem;
+
+  & .sub-container {
+    position: relative;
+    width: 30rem;
+    margin: 1rem;
+    max-width: 100%;
+
+    & img {
+      object-fit: cover;
+      width: 30rem;
+      height: 30rem;
+    }
+
+    &:hover .likes {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #222;
+      color: #fff;
+      font-size: 1.5rem;
+      // transform: scale(1);
+      // transition: all 1s ease;
+    }
+  }
+}
+
+h1 {
+  padding: 2rem;
+  font-size: 4rem;
+}
+.likes {
+  display: none;
+  width: 100%;
+  height: 3rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  // transform: scale(0);
+}
+
+.fa-heart {
+  color: red;
+  position: absolute;
+  animation: grow 0.6s linear;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+@keyframes grow {
+  to {
+    transform: translate(-50%, -50%) scale(10);
+    opacity: 0;
+  }
+}
